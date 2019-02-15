@@ -1,0 +1,20 @@
+server:
+  port: 8800
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    appname: springcloud-config-server
+spring:
+  application:
+    name: springcloud-config-server
+#  security:
+#    basic:
+#      enabled: true
+#    user:
+#      name: root
+#      password: 123
