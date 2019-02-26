@@ -2,16 +2,18 @@ server:
   port: 8800
 
 eureka:
+  vipAddress: springClient
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+    registry-refresh-single-vip-address: springcloud-client
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
-    appname: springcloud-config-server
+    instance-id: ${spring.application.name}:192.168.1.17:${spring.application.instance_id:${server.port}}
+    appname: springcloud-client
 spring:
   application:
-    name: springcloud-config-server
+    name: springcloud-client
 #  security:
 #    basic:
 #      enabled: true

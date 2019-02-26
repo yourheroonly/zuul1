@@ -2,6 +2,7 @@ server:
   port: 8761
 
 eureka:
+  vipAddress: eureka
   datacenter: trmap
   environment: product
   client:
@@ -12,6 +13,7 @@ eureka:
 
     healthcheck:
       enabled: true
+    registry-refresh-single-vip-address: eureka
 #spring:
 #  security:
 #    basic:

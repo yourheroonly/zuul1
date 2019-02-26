@@ -1,8 +1,8 @@
-server:
-  port: 8400
-zuul:
-  routes:
-    user:
-      path: /**
-      service-id: SPRINGCLOUD-CONFIG-SERVER
-#      url: http://localhost:8800
+#server:
+#  port: 8400
+#zuul:
+#  routes:
+#    user:
+#      path: /**
+#      service-id: SPRINGCLOUD-CLIENT
+##      url: http://localhost:8800
